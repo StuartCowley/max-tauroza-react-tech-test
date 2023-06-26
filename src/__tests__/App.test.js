@@ -1,8 +1,15 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import App from '../components/App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('App', () => {
+  it('renders app component correctly', () => {
+    const { asFragment } = render(<App />);
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('renders an image', () => {
+    render(<App />);
+    expect(screen.getByAltText('Nasa logo')).toBeInTheDocument();
+  });
 });
