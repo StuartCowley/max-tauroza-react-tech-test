@@ -1,0 +1,29 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  margin-top: 20px;
+  height: 108px;
+  width: 192px;
+  border-radius: 30px;
+}
+
+.main-title {
+  margin-top: 30px;
+  font-size: 80px;
+  color: white;
+}
+
+@media only screen and (max-width: 615px) {
+  .main-title {
+    font-size: 10vw;
+  }
+
+  .logo {
+    width: 30vw;
+    height: auto;
+  }
+}
